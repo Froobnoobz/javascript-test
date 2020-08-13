@@ -12,7 +12,7 @@ function dummy () {
  * @returns {array}
  */
 function reverse (array) {
-  return [];
+  return array.reverse();
 }
 
 /**
@@ -27,7 +27,7 @@ function reverse (array) {
  * 
  */
 function stringReverse (text) {
-  return '';
+  return text.split('').reverse().join('');
 }
 
 
@@ -42,7 +42,15 @@ function stringReverse (text) {
  * @returns {array}
  */
 function fibonacci (length) {
-  return [];
+  let x = 1, y = 1, returnArray = [1];
+  
+  while(y < length) {
+    returnArray.push(y);
+    y += x;
+    x = y - x;
+  }
+
+  return returnArray;
 }
 
 /**
@@ -56,7 +64,9 @@ function fibonacci (length) {
  * @returns {number}
  */
 function biggest (array) {
-  return 0;
+
+  // use spread operator to expand for the Math.max args
+  return Math.max(...array);
 }
 
 /**
@@ -75,7 +85,16 @@ function biggest (array) {
  * @returns {array}
  */
 function range (start, end) {
-  return [];
+  // im not to sure if this is like a trick question and i'm supposed to handle like start > end
+  if(start > end) return [];
+
+  let returnArray = [];
+
+  for(i = start; i < end; i++) {
+    returnArray.push(i);
+  }
+
+  return returnArray;
 }
 
 /**
@@ -92,7 +111,18 @@ function range (start, end) {
  * @returns {array}
  */
 function flatten (array) {
-  return [];
+  // begin by reducing the array, e.g. reducing the array of items to a single item
+  return array.reduce((accumulator, item) => {
+
+    // concat the accumulator with item
+    return accumulator.concat(
+
+      // however if the item is an array, recurse flatten on the item, 
+      // so it will return a flattened array of its children ( and if its children have array it will also do so )
+      // else just concat the child array ( item )
+      Array.isArray(item) ? flatten(item) : item
+    );
+  }, []);
 }
 
 module.exports = {
