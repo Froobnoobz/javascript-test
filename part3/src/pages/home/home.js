@@ -1,7 +1,6 @@
 import React from "react";import {
   BrowserRouter as Router,
-  Link,
-  Route,
+  Link
 } from "react-router-dom";
 
 import AudioPlayer from "./audio-player/audio-player";

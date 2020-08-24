@@ -18,8 +18,17 @@
     display: flex;
     text-align: center;
 
-    h2 {
+    .topic-nav {
       flex: 1;
+
+      h2 {
+        &.active {
+          border-bottom: 3px solid #55C6D7;
+          opacity: 0.95;
+          width: 30%;
+          margin: auto;
+        }
+      }
     }
   }
 

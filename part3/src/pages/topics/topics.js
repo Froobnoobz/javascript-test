@@ -1,85 +1,61 @@
 import React from "react";
 import "./topics.scss";
+
 import {TopicHome} from "./topic-home/topic-home";
 import {Topic1} from "./topic-1/topic-1";
 import {Topic2} from "./topic-2/topic-2";
 import {Topic3} from "./topic-3/topic-3";
 import {Topic4} from "./topic-4/topic-4";
 import {Topic5} from "./topic-5/topic-5";
+
+import {TopicsList} from "./topics-list";
+import {Routes} from "../../components/router/routes";
+import {TopicsNav} from "./topics-nav/topics-nav"
 import {
   BrowserRouter as Router,
+  BrowserRouter as useRouteMatch,
   Switch,
-  Route,
-  useRouteMatch
+  Route
 } from "react-router-dom";
 
-let topics = [
-  {
-    path: "/topics/topic-home",
-    exact: true,
-    sidebar: "Home",
-    main: () => <TopicHome></TopicHome>
-  },
-  {
-    path: "/topics/topic-1",
-    exact: true,
-    sidebar: "Topic 1",
-    main: () => <Topic1></Topic1>
-  },
-  {
-    path: "/topics/topic-2",
-    exact: true,
-    sidebar: "Topic 2",
-    main: () => <Topic2></Topic2>
-  },
-  {
-    path: "/topics/topic-3",
-    exact: true,
-    sidebar: "Topic 3",
-    main: () => <Topic3></Topic3>
-  },
-  {
-    path: "/topics/topic-4",
-    exact: true,
-    sidebar: "Topic 4",
-    main: () => <Topic4></Topic4>
-  },
-  {
-    path: "/topics/topic-5",
-    exact: true,
-    sidebar: "Topic 5",
-    main: () => <Topic5></Topic5>
+
+export class TopicsPage extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentTopic: "topic-home"
+    }
   }
-];
 
-export function TopicsPage() {
+  RenderCurrentTopic = () => {
+    switch(this.state.currentTopic) {
+      case "topic-home" : return <TopicHome></TopicHome>;
+      case "topic-1" : return <Topic1></Topic1>;
+      case "topic-2" : return <Topic2></Topic2>;
+      case "topic-3" : return <Topic3></Topic3>;
+      case "topic-4" : return <Topic4></Topic4>;
+      case "topic-5" : return <Topic5></Topic5>;
 
-    let path = useRouteMatch();
+      default: return;
+    }
+  }
 
+  ChangeCurrentTopic = (topic) => {
+    this.setState({
+      currentTopic: topic
+    });
+  }
+
+  render() {
     return (
       <div id="topics-page-container">
-        {/* <h2>Topics</h2>
-        <ul>
-          <li>
-            <Link to={`${path.url}/topic-home`}>Rendering with React</Link>
-          </li>
-        </ul> */}
-        <Router>
-          <Switch>
-            {topics.map((route, index) => (
-              <Route
-                key={index}
-                path={route.path}
-                exact={route.exact}
-                children={<route.main />}
-              />
-            ))}
-          </Switch>
-        </Router>
+        {this.RenderCurrentTopic()}
         <div id="gradient-nav-bar">
-          {topics.map(topic => <h2 className="topic-button">{topic.sidebar}</h2>)}
+          <TopicsNav ChangeCurrentTopic={this.ChangeCurrentTopic} currentTopic={this.state.currentTopic}></TopicsNav>
         </div>
       </div>
     );
-    
-  }
+  } 
+}
