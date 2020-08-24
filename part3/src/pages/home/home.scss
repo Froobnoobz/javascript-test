@@ -1,3 +1,47 @@
 #home-container {
+  height: 100%;
+  width: 100%;
   background-color: #1A2C40;
+
+  #globe-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  #get-started-container {
+    z-index: 2;
+    position: relative;
+    left: 0;
+    top: 0;
+    color: #F2F2F2;
+    text-align: center;
+
+    #header-text {
+      margin: 0;
+      position: absolute;
+      top: 218px;
+      left: 20%;
+      font-family: Arial;
+      font-size: 45px;
+      line-height: 52px;
+    }
+
+    #get-started-text {
+      position: absolute;
+      top: 782px;
+      left: 20%;
+      font-family: Arial;
+      font-size: 22px;
+      line-height: 150%;
+    }
+
+    #logo-image {
+      width: 457.5px;
+      position: absolute;
+      top: 430px;
+      left: 16%;
+    }
+  }
 }
