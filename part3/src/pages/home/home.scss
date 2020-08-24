@@ -42,6 +42,10 @@
       line-height: 150%;
       font-weight: 600;
 
+      .begin:hover {
+        border-bottom: 3px solid white;
+      }
+
       svg {
         font-size: xx-large;
         position: relative;

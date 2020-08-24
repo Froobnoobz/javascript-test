@@ -1,5 +1,4 @@
 import React from "react";import {
-  BrowserRouter as Router,
   Link
 } from "react-router-dom";
 
@@ -10,9 +9,6 @@ import Logo from "./images/logo.png";
 import {FaRegHandPointRight} from 'react-icons/fa';
 
 export class Home extends React.Component {
-    constructor(props) {
-      super(props);
-    }
     render() {
       return (
         <div id="home-container">
@@ -22,10 +18,11 @@ export class Home extends React.Component {
             <Link to="/topics">
               <span id="get-started-text">
                 <FaRegHandPointRight className="get-started-icon"></FaRegHandPointRight> 
-                <span>Click begin to get started.</span>
+                <span>Click <span className="begin">begin</span> to get started.</span>
               </span>
             </Link>
           </div>
+          {/* TO-DO - Make audio player function, currently just presentational component */}
           <AudioPlayer></AudioPlayer>
           <img id="globe-image" alt="globe" src={Globe}></img>
         </div>
