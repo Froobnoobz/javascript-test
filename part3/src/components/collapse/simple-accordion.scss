@@ -1,0 +1,34 @@
+.accordion {
+  margin-bottom: 15px;
+
+  .MuiButtonBase-root{
+    background-color: #55C6D7;
+    padding: 8px 20px 8px 30px;
+    border-radius: 0;
+
+    .MuiIconButton-root {
+      padding: 7px;
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 2.5rem;
+    }
+
+    .makeStyles-heading-2 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .MuiCollapse-container {
+    background-color: white;
+    opacity: 0.9;
+
+    .MuiTypography-body1 {
+      padding: 0.5em;
+    }
+  }
+}

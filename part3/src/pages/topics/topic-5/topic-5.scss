@@ -50,6 +50,18 @@
     }
   }
 
+  .topic-accordion {
+    z-index: 2;
+    position: absolute;
+    left: 26.6%;
+    width: 29%;
+    height: 100%;
+
+    .accordions {
+      padding-top: 15%;
+    }
+  }
+
   .background-image {
     width: 100%;
     position: absolute;

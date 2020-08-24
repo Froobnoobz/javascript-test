@@ -1,6 +1,9 @@
 import React from "react";
 import BackgroundImage from "./home3-bg.svg";
+import {SimpleAccordion} from "../../../components/collapse/simple-accordion";
+import {Topics} from "./topics";
 import "./topic-5.scss";
+
 
 export function Topic5() {
   return(
@@ -14,6 +17,11 @@ export function Topic5() {
           </p>
           <p className="quote-highlight">Sed porta, lorem a sodales rhoncus, neque ligula dictum libero, sit amet.</p>
         </article>
+      </div>
+      <div className="topic-accordion">
+        <div className="accordions">
+          {Topics.map(topic => <SimpleAccordion topic={topic}></SimpleAccordion>)}
+        </div>
       </div>
     </div>
   );
