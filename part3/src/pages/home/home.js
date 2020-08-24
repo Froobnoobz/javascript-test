@@ -12,6 +12,8 @@ import {FaRegHandPointRight} from 'react-icons/fa';
 export class Home extends React.Component {
     constructor(props) {
       super(props);
+      console.log(this.props.location);
+      debugger;
     }
     render() {
       return (
@@ -19,7 +21,7 @@ export class Home extends React.Component {
           <div id="get-started-container">
             <h2 id="header-text">LOREM IPSUM</h2>
             <img id="logo-image" alt="logo" src={Logo}></img>
-            <Link to="/topics/topic-home">
+            <Link to="/topics">
               <span id="get-started-text">
                 <FaRegHandPointRight className="get-started-icon"></FaRegHandPointRight> 
                 <span>Click begin to get started.</span>

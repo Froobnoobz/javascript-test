@@ -8,16 +8,7 @@ import {Topic3} from "./topic-3/topic-3";
 import {Topic4} from "./topic-4/topic-4";
 import {Topic5} from "./topic-5/topic-5";
 
-import {TopicsList} from "./topics-list";
-import {Routes} from "../../components/router/routes";
 import {TopicsNav} from "./topics-nav/topics-nav"
-import {
-  BrowserRouter as Router,
-  BrowserRouter as useRouteMatch,
-  Switch,
-  Route
-} from "react-router-dom";
-
 
 export class TopicsPage extends React.Component {
 
@@ -31,7 +22,7 @@ export class TopicsPage extends React.Component {
 
   RenderCurrentTopic = () => {
     switch(this.state.currentTopic) {
-      case "topic-home" : return <TopicHome></TopicHome>;
+      case "topic-home" : return <TopicHome ChangeCurrentTopic={this.ChangeCurrentTopic}></TopicHome>;
       case "topic-1" : return <Topic1></Topic1>;
       case "topic-2" : return <Topic2></Topic2>;
       case "topic-3" : return <Topic3></Topic3>;
