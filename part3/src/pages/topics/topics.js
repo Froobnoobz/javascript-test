@@ -1,6 +1,11 @@
 import React from "react";
 import "./topics.scss";
 import {TopicHome} from "./topic-home/topic-home";
+import {Topic1} from "./topic-1/topic-1";
+import {Topic2} from "./topic-2/topic-2";
+import {Topic3} from "./topic-3/topic-3";
+import {Topic4} from "./topic-4/topic-4";
+import {Topic5} from "./topic-5/topic-5";
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,8 +17,38 @@ let topics = [
   {
     path: "/topics/topic-home",
     exact: true,
-    sidebar: "Topic 1",
+    sidebar: "Home",
     main: () => <TopicHome></TopicHome>
+  },
+  {
+    path: "/topics/topic-1",
+    exact: true,
+    sidebar: "Topic 1",
+    main: () => <Topic1></Topic1>
+  },
+  {
+    path: "/topics/topic-2",
+    exact: true,
+    sidebar: "Topic 2",
+    main: () => <Topic2></Topic2>
+  },
+  {
+    path: "/topics/topic-3",
+    exact: true,
+    sidebar: "Topic 3",
+    main: () => <Topic3></Topic3>
+  },
+  {
+    path: "/topics/topic-4",
+    exact: true,
+    sidebar: "Topic 4",
+    main: () => <Topic4></Topic4>
+  },
+  {
+    path: "/topics/topic-5",
+    exact: true,
+    sidebar: "Topic 5",
+    main: () => <Topic5></Topic5>
   }
 ];
 
@@ -42,13 +77,7 @@ export function TopicsPage() {
           </Switch>
         </Router>
         <div id="gradient-nav-bar">
-          {}
-          <h2 className="topic-button">Home</h2>
-          <h2>Topic 1</h2>
-          <h2>Topic 2</h2>
-          <h2>Topic 3</h2>
-          <h2>Topic 4</h2>
-          <h2>Topic 5</h2>
+          {topics.map(topic => <h2 className="topic-button">{topic.sidebar}</h2>)}
         </div>
       </div>
     );
