@@ -28,6 +28,24 @@ Use Reactjs to build a webpage based on the provided figma file https://www.figm
 
 You also have been provided ```index.html```,```app.js```,```app.css```.
 
+# Ben
+To run
+<ol>
+  <li>
+    $ cd part3
+  </li>
+  <li>
+    $ npm install
+  </li>
+  <li>
+    npm start
+  </li>
+  <li>
+    hire Ben?
+  </li>
+</ol>
+
+
 ## What we expect
 
 1. Please commit with meaningful message, we'd like to see how well you use git.
