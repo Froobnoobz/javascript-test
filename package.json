@@ -2,8 +2,9 @@
   "name": "javascript-test",
   "version": "0.0.1",
   "description": "savve js interview test",
-  "main": "index.js",
+  "main": "./part3/app.js",
   "scripts": {
+    "start": "react-scripts start",
     "test:part2": "node ./node_modules/mocha/bin/mocha ./part2/test.js || true",
     "test:part3": "node ./node_modules/http-server/bin/http-server ./part3/"
   },
@@ -21,5 +22,8 @@
     "expect.js": "^0.3.1",
     "http-server": "^0.11.1",
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "react-scripts": "^3.4.3"
   }
 }
