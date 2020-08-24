@@ -13,11 +13,9 @@
     margin: auto;
 
     svg {
-      & h2{
-        top: 50%;
-      }
-
-      padding-right: 5px;
+      position: relative;
+      left: -6px;
+      top: 2px;
     }
 
     &.active {

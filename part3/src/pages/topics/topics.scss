@@ -20,6 +20,7 @@
       background: linear-gradient(360deg, rgba(0, 0, 0, 0.93) 45.83%, rgba(18, 18, 18, 0) 100%);
     }
   }
+
   .topic {
     position: absolute;
     left: 0;
@@ -90,6 +91,7 @@
         text-align: center;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        cursor: pointer;
       }
     }
 
