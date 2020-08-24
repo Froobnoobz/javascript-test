@@ -16,7 +16,7 @@ export function TopicsNav(props) {
     return TopicsList.map(topic => {
       let activeClass = props.currentTopic === topic.subPath ? "active" : "";
         return (
-          <div className="topic-nav" onClick={() => {props.ChangeCurrentTopic(topic.subPath)}}>
+          <div key={topic.sidebar} className="topic-nav" onClick={() => {props.ChangeCurrentTopic(topic.subPath)}}>
             <h2 
             className={"topic-button " + activeClass}>
               {topic.subPath === "topic-home" ? <HiHome></HiHome> : <span></span>}

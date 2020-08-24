@@ -25,7 +25,7 @@ export function Topic5() {
       <div className="topic-accordion">
         <div className="accordions">
           {/* Topics are stored in a seperate array for cleanliness */}
-          {TopicsList.map(topic => <SimpleAccordion topic={topic}></SimpleAccordion>)}
+          {TopicsList.map((topic, index) => <SimpleAccordion key={index} topic={topic}></SimpleAccordion>)}
         </div>
       </div>
     </div>
