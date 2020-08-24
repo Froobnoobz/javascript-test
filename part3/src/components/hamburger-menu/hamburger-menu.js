@@ -3,11 +3,14 @@ import "./hamburger-menu.scss"
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {MenuDropdown} from './dropdown/menu-dropdown';
 
-// TO-DO: Make this component functional, currently only presentational
+// TO-DO: Add animation for opening drop down
+// On defocus of the drop down, close dropdown
+// On open of menu, change icon of hamburger and rechange when closed
 export default class HamburgerDropdown extends React.Component {
   
   constructor(props) {
     super(props);
+    
     this.state = { open: false };
   }
 
