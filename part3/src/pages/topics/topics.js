@@ -21,6 +21,10 @@ export class TopicsPage extends React.Component {
     }
   }
 
+  /**
+   * Returns the current topic to be rendered
+   * White is the states currentTopic
+   */
   RenderCurrentTopic = () => {
     switch(this.state.currentTopic) {
       case "topic-home" : return <TopicHome ChangeCurrentTopic={this.ChangeCurrentTopic}></TopicHome>;
@@ -34,6 +38,10 @@ export class TopicsPage extends React.Component {
     }
   }
 
+  /**
+   * Sets the state for current topic
+   * @param {string} topic The topic sub-path to be set
+   */
   ChangeCurrentTopic = (topic) => {
     this.setState({
       currentTopic: topic

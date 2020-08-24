@@ -1,14 +1,14 @@
 import React from "react";
 import BackgroundImage from "./home3-bg.svg";
 import {SimpleAccordion} from "../../../components/collapse/simple-accordion";
-import {Topics} from "./topics";
+import {TopicsList} from "./topics-list";
 import "./topic-5.scss";
 
 
 export function Topic5() {
   return(
     <div className="topic-5">
-      <img className="background-image" alt="f" src={BackgroundImage}></img>
+      <img className="background-image" alt="background" src={BackgroundImage}></img>
       <div className="topic-content">
         <article>
           <h1 className="header-text">Nulla imperdiet</h1>
@@ -20,7 +20,7 @@ export function Topic5() {
       </div>
       <div className="topic-accordion">
         <div className="accordions">
-          {Topics.map(topic => <SimpleAccordion topic={topic}></SimpleAccordion>)}
+          {TopicsList.map(topic => <SimpleAccordion topic={topic}></SimpleAccordion>)}
         </div>
       </div>
     </div>
