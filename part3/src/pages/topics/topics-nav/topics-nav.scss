@@ -1,0 +1,76 @@
+.topic-nav {
+  flex: 1;
+  cursor: pointer;
+
+  h2 {
+    position: relative;
+    top: 65%;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #bebebe;
+    margin: auto;
+
+    &.active {
+      color: #ffffff;
+      border-bottom: 3px solid #55C6D7;
+      opacity: 0.95;
+      width: 30%;
+    }
+
+    &:hover {
+      border-bottom: 3px solid #55C6D7;
+      width: 30%;
+    }
+  }
+}
+
+.topic-5-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+
+  .left {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #E0E0E0;
+    right: 85px;
+    bottom: 0;
+
+    .nav-icon {
+      font-size: 34px;
+      font-weight: 500;
+      height: 34px;
+      padding-top: 5px;
+    }
+    
+  } 
+
+  .right {
+    width: 85px;
+    height: 85px;
+    background-color: #55C6D7;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
+    a {
+      text-decoration: none;
+      color: black;
+
+      .nav-icon {
+        font-size: 50px;
+        font-weight: 500;
+        height: 50px;
+        padding-top: 5px;
+      }
+    }
+  }
+}

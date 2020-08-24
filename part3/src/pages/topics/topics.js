@@ -40,10 +40,12 @@ export class TopicsPage extends React.Component {
   }
 
   render() {
+    let gradientClass = this.state.currentTopic !== "topic-5" ? "gradient" : "";
+
     return (
       <div id="topics-page-container">
         {this.RenderCurrentTopic()}
-        <div id="gradient-nav-bar">
+        <div id="nav-bar" className={gradientClass}>
           <TopicsNav ChangeCurrentTopic={this.ChangeCurrentTopic} currentTopic={this.state.currentTopic}></TopicsNav>
         </div>
       </div>
