@@ -74,4 +74,42 @@
     height: 53px;
     z-index: 3;
   }
+
+
+  @media only screen and (max-width: 600px) {
+    #get-started-container {
+      #header-text {
+        position: absolute;
+        top: 100px;
+        left: 20%;
+        font-size: 45px;
+        line-height: 52px;
+      }
+
+      #logo-image {
+        width: 200.5px;
+        position: absolute;
+        top: 230px;
+        left: 30%;
+      }
+    
+      #get-started-text {
+        position: absolute;
+        top: 380px;
+        left: 22%;
+        font-family: Arial;
+        font-size: 22px;
+        line-height: 150%;
+        font-weight: 600;
+      }
+    }
+
+    #globe-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      width: 350px;
+    }
+  }
 }

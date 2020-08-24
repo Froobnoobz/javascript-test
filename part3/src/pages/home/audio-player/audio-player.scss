@@ -38,4 +38,30 @@ $how-too-blue: #08395B;
     font-weight: bold;
     letter-spacing: 0.5px;
   }
+
+  @media only screen and (max-width: 600px) {
+    .play-icon {
+      left: 10%;
+      top: 33%;
+    }
+  
+    .rectangle {
+      top: 50%;
+      left: 24%;
+    }
+  
+    .volume-icon {
+      left: 74%;
+      top: 38%;
+      font-size: large;
+    }
+  
+    .transcript-selector {
+      left: 80%;
+      top: 38%;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0.5px;
+    }
+  }
 }
