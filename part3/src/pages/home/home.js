@@ -1,4 +1,6 @@
 import React from "react";
+
+import AudioPlayer from "./audio-player/audio-player";
 import "./home.scss";
 import Globe from "./images/globe.png";
 import Logo from "./images/logo.png";
@@ -14,8 +16,12 @@ export class Home extends React.Component {
           <div id="get-started-container">
             <h2 id="header-text">LOREM IPSUM</h2>
             <img id="logo-image" alt="logo" src={Logo}></img>
-            <span id="get-started-text"><FaRegHandPointRight></FaRegHandPointRight> Click begin to sget started.</span>
+            <span id="get-started-text">
+              <FaRegHandPointRight className="get-started-icon"></FaRegHandPointRight> 
+              <span>Click begin to get started.</span>
+            </span>
           </div>
+          <AudioPlayer></AudioPlayer>
           <img id="globe-image" alt="globe" src={Globe}></img>
         </div>
       );

@@ -1,0 +1,41 @@
+$how-too-blue: #08395B;
+
+.audio-player {
+  background-color: #ffffff;
+  opacity: 0.8;
+  
+  .play-icon {
+    position: absolute;
+    left: 31%;
+    top: 33%;
+    font-size: x-large;
+    color: $how-too-blue;
+  }
+
+  .rectangle {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+  }
+
+  .volume-icon {
+    position: absolute;
+    left: 78%;
+    top: 38%;
+    font-size: large;
+    color: $how-too-blue;
+  }
+
+  .transcript-selector {
+    position: absolute;
+    left: 80%;
+    top: 38%;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 150%;
+    color: $how-too-blue;
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+}
