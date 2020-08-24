@@ -28,7 +28,7 @@ Use Reactjs to build a webpage based on the provided figma file https://www.figm
 
 You also have been provided ```index.html```,```app.js```,```app.css```.
 
-# Ben
+### Ben Part 3
 To run
 <ol>
   <li>

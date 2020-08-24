@@ -49,12 +49,13 @@ export class TopicsPage extends React.Component {
   }
 
   render() {
+
+    // If the topic is not topic-5, we want the gradient on the nav bar
     let gradientClass = this.state.currentTopic !== "topic-5" ? "gradient" : "";
 
     return (
       <div id="topics-page-container">
         <HamburgerDropdown></HamburgerDropdown>
-
         {this.RenderCurrentTopic()}
         <div id="nav-bar" className={gradientClass}>
           <TopicsNav ChangeCurrentTopic={this.ChangeCurrentTopic} currentTopic={this.state.currentTopic}></TopicsNav>

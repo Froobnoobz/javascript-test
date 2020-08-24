@@ -5,9 +5,14 @@ import {HiChevronLeft} from 'react-icons/hi';
 import {HiHome} from 'react-icons/hi';
 import "./topics-nav.scss";
 
+// TO-DO - not sure if this was the best way to handle the topic 1-4 and 5 nav bar split
+// Right now it has code smell because I definately thought of part 5 after 1-4
 export function TopicsNav(props) {
+
+  // if not topic 5 - map over the topics and render a flex div with the topic name
   if(props.currentTopic !== "topic-5")
   {
+    // Topics list is stored in a seperate file for neatness
     return TopicsList.map(topic => {
       let activeClass = props.currentTopic === topic.subPath ? "active" : "";
         return (
@@ -22,6 +27,8 @@ export function TopicsNav(props) {
     });
   }
   
+  // Else we render the topic 5 nav bar
+  // No else required since the initial if has a return statement
   return (
     <div className="topic-5-nav">
       <div className="left" onClick={() => {props.ChangeCurrentTopic("topic-4")}}>

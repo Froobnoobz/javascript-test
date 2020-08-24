@@ -2,6 +2,8 @@ export const TopicsList = [
   {
     subPath: "topic-home",
     sidebar: "Home",
+    // Ideally would have handled the icon through here
+    // But due to the icon library i'm using i'm not sure if I can
     icon: ""
   },
   {
