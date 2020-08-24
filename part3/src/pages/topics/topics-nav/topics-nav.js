@@ -2,6 +2,7 @@ import React from "react";
 import {TopicsList} from "../topics-list";
 import {HiChevronRight} from 'react-icons/hi';
 import {HiChevronLeft} from 'react-icons/hi';
+import {HiHome} from 'react-icons/hi';
 import "./topics-nav.scss";
 
 export function TopicsNav(props) {
@@ -13,6 +14,7 @@ export function TopicsNav(props) {
           <div className="topic-nav" onClick={() => {props.ChangeCurrentTopic(topic.subPath)}}>
             <h2 
             className={"topic-button " + activeClass}>
+              {topic.subPath === "topic-home" ? <HiHome></HiHome> : <span></span>}
               {topic.sidebar}
             </h2>
           </div>

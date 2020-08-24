@@ -9,9 +9,16 @@
     font-weight: 800;
     font-size: 18px;
     line-height: 26px;
-    text-transform: uppercase;
     color: #bebebe;
     margin: auto;
+
+    svg {
+      & h2{
+        top: 50%;
+      }
+
+      padding-right: 5px;
+    }
 
     &.active {
       color: #ffffff;
