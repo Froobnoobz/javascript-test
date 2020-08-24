@@ -9,6 +9,7 @@ import {Topic4} from "./topic-4/topic-4";
 import {Topic5} from "./topic-5/topic-5";
 
 import {TopicsNav} from "./topics-nav/topics-nav"
+import HamburgerDropdown from "../../components/hamburger-menu/hamburger-menu";
 
 export class TopicsPage extends React.Component {
 
@@ -44,6 +45,8 @@ export class TopicsPage extends React.Component {
 
     return (
       <div id="topics-page-container">
+        <HamburgerDropdown></HamburgerDropdown>
+
         {this.RenderCurrentTopic()}
         <div id="nav-bar" className={gradientClass}>
           <TopicsNav ChangeCurrentTopic={this.ChangeCurrentTopic} currentTopic={this.state.currentTopic}></TopicsNav>
